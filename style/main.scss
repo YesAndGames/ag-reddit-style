@@ -33,5 +33,41 @@ $heading-font-stack: Impact, Charcoal, "Arial Black", Gadget, sans-serif;
         color: $light;
       }
     }
+
+    // hot
+    [href$="/r/AdventureGuild/"] {
+    }
+
+    // new
+    [href$="/new/"] {
+    }
+
+    // rising
+    [href$="/rising/"] {
+    }
+
+    // controversial
+    [href$="/controversial/"] {
+      display: none;
+    }
+
+    // top
+    [href$="/top/"] {
+    }
+
+    // gilded
+    [href$="/gilded/"] {
+      display: none;
+    }
+
+    // wiki
+    [href$="/wiki/"] {
+      display: none;
+    }
+
+    // promoted
+    [href$="/ads/"] {
+      display: none;
+    }
   }
 }
