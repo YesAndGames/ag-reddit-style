@@ -1,5 +1,6 @@
 $dark: #000000;
 $light: #ffffff;
+$light-grey: #555555;
 $gold: #f9bb16;
 
 $heading-font-stack: Impact, Charcoal, "Arial Black", Gadget, sans-serif;
@@ -27,10 +28,23 @@ $heading-font-stack: Impact, Charcoal, "Arial Black", Gadget, sans-serif;
     margin-bottom: 30px;
 
     li {
+      font-size: 18pt;
+
       a {
         @include heading-font();
         background-color: transparent;
+        color: $light-grey;
+      }
+
+      a:hover {
         color: $light;
+      }
+    }
+
+    .selected {
+      a {
+        color: $light;
+        border: none;
       }
     }
 
