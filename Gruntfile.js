@@ -5,7 +5,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     sass: {
       dist: {
-        options: { style: 'expanded' },
+        options: { style: 'compressed' },
         files: { 'build/main.css': 'style/main.scss' }
       }
     },
