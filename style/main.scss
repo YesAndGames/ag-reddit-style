@@ -1,0 +1,26 @@
+$dark: #000000;
+$light: #ffffff;
+$gold: #f9bb16;
+
+#header {
+
+  background-color: $dark;
+  border-bottom: 2px solid $gold;
+
+  .pagename {
+    color: $light;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .tabmenu {
+    li {
+      a {
+        background-color: transparent;
+        color: $light;
+      }
+    }
+  }
+}
