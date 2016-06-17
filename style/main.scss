@@ -2,8 +2,14 @@ $dark: #000000;
 $light: #ffffff;
 $gold: #f9bb16;
 
-#header {
+$heading-font-stack: Impact, Charcoal, "Arial Black", Gadget, sans-serif;
 
+@mixin heading-font() {
+  font-family: $heading-font-stack;
+  text-transform:uppercase;;
+}
+
+#header {
   background-color: $dark;
   border-bottom: 2px solid $gold;
 
@@ -16,8 +22,13 @@ $gold: #f9bb16;
   }
 
   .tabmenu {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+
     li {
       a {
+        @include heading-font();
         background-color: transparent;
         color: $light;
       }
