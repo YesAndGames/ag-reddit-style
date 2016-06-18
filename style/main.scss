@@ -21,6 +21,25 @@ $heading-font-stack: Impact, Charcoal, "Arial Black", Gadget, sans-serif;
   border-bottom: 2px solid $gold;
   height: 170px;
 
+  #sr-header-area {
+    background-color: transparent;
+    border: none;
+
+    .width-clip {
+      right: 300px;
+
+      a {
+        color: $light-grey;
+      }
+    }
+
+    .width-clip:hover {
+      a {
+        color: $light;
+      }
+    }
+  }
+
   #header-img {
     position: absolute;
     top: 0;
