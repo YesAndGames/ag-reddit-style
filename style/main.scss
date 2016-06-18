@@ -38,15 +38,34 @@ $common-transition-time: .2s;
     .width-clip {
       right: 300px;
 
-      a {
+      .selected.title, a {
         @include transition($common-transition-time);
         color: $light-grey;
       }
 
       &:hover {
-        a {
+        .selected.title, a {
           @include transition($common-transition-time);
           color: $light;
+        }
+      }
+
+      .drop-choices {
+        background-color: $dark;
+        border-color: $light-grey;
+
+        a {
+          @include transition($common-transition-time);
+          background-color: transparent;
+
+          &:hover {
+            @include transition($common-transition-time);
+            background-color: $light-grey;
+          }
+        }
+
+        a.bottom-option.choice {
+          border-top-color: $light-grey;
         }
       }
 
