@@ -77,6 +77,11 @@ $common-transition-time: .2s;
         background-color: transparent;
       }
     }
+
+    .header-bottom-right {
+      background-color: transparent;
+      top: 0px;
+    }
   }
 
   #header-img {
