@@ -10,30 +10,58 @@ $heading-font-stack: Impact, Charcoal, "Arial Black", Gadget, sans-serif;
   text-transform:uppercase;;
 }
 
+@mixin hide-tab() {
+  display: none;
+  margin-left: -3px;
+  margin-right: -3px;
+}
+
 #header {
   background-color: $dark;
   border-bottom: 2px solid $gold;
+  height: 170px;
+
+  #header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
   .pagename {
     color: $light;
+    font-size: 0;
 
     a {
       color: inherit;
+      display: block;
+      width: 510px;
+      height: 49px;
+      background: url(%%adventure-guild%%) no-repeat center center;
+      position: absolute;
+      left: 50%;
+      margin-left: -255px;
+      bottom: 70px;
     }
   }
 
   .tabmenu {
     display: block;
     text-align: center;
-    margin-bottom: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
 
     li {
       font-size: 18pt;
+      margin: 0px;
 
       a {
         @include heading-font();
         background-color: transparent;
         color: $light-grey;
+        padding-left: 20px;
+        padding-right: 20px;
       }
 
       a:hover {
@@ -62,7 +90,7 @@ $heading-font-stack: Impact, Charcoal, "Arial Black", Gadget, sans-serif;
 
     // controversial
     [href$="/controversial/"] {
-      display: none;
+      @include hide-tab();
     }
 
     // top
@@ -71,17 +99,17 @@ $heading-font-stack: Impact, Charcoal, "Arial Black", Gadget, sans-serif;
 
     // gilded
     [href$="/gilded/"] {
-      display: none;
+      @include hide-tab();
     }
 
     // wiki
     [href$="/wiki/"] {
-      display: none;
+      @include hide-tab();
     }
 
     // promoted
     [href$="/ads/"] {
-      display: none;
+      @include hide-tab();
     }
   }
 }
