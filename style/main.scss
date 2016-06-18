@@ -49,6 +49,14 @@ $common-transition-time: .2s;
           color: $light;
         }
       }
+
+      .sr-list {
+        margin-right: 48px;
+      }
+
+      #sr-more-link {
+        background-color: transparent;
+      }
     }
   }
 
