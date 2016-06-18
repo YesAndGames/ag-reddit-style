@@ -16,6 +16,14 @@ $heading-font-stack: Impact, Charcoal, "Arial Black", Gadget, sans-serif;
   margin-right: -3px;
 }
 
+@mixin transition($duration) {
+    -webkit-transition: $duration;
+    -moz-transition: $duration;
+    -ms-transition: $duration;
+    -o-transition: $duration;
+    transition: $duration;
+}
+
 #header {
   background-color: $dark;
   border-bottom: 2px solid $gold;
@@ -29,13 +37,15 @@ $heading-font-stack: Impact, Charcoal, "Arial Black", Gadget, sans-serif;
       right: 300px;
 
       a {
+        @include transition(.2s);
         color: $light-grey;
       }
-    }
 
-    .width-clip:hover {
-      a {
-        color: $light;
+      &:hover {
+        a {
+          @include transition(.2s);
+          color: $light;
+        }
       }
     }
   }
