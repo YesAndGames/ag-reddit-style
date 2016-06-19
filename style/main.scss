@@ -84,6 +84,20 @@ $common-transition-time: .2s;
     background-color: transparent;
     top: 0px;
     bottom: auto;
+
+    a {
+      @include transition($common-transition-time);
+      color: $light-grey;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:hover {
+      @include transition($common-transition-time);
+      color: $light;
+    }
   }
 
   #header-img {
