@@ -37,6 +37,7 @@ $common-transition-time: .2s;
 
     .width-clip {
       right: 300px;
+      margin-top: 2px;
 
       .selected.title, a {
         @include transition($common-transition-time);
