@@ -95,8 +95,10 @@ $common-transition-time: .2s;
     }
 
     &:hover {
-      @include transition($common-transition-time);
-      color: $light;
+      a {
+        @include transition($common-transition-time);
+        color: $light;
+      }
     }
   }
 
