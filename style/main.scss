@@ -210,5 +210,10 @@ $common-transition-time: .2s;
     color: $light-grey;
   }
 
-
+  #userbarToggle {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    color: $light-grey;
+  }
 }
