@@ -104,8 +104,8 @@ $common-transition-time: .2s;
 
   #header-img {
     position: absolute;
-    bottom: 5px;
-    left: 5px;
+    bottom: 65px;
+    left: 3%;
     background-image: url(%%ag-reddit-logo%%);
     background-position: center;
     background-size: 180px, 60px;
@@ -137,8 +137,6 @@ $common-transition-time: .2s;
     left: 0;
     right: 0;
     bottom: 30px;
-    width: 320px;
-    margin: 0 auto;
 
     li {
       font-size: 18pt;
