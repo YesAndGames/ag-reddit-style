@@ -85,7 +85,7 @@ $common-transition-time: .2s;
     top: 0px;
     bottom: auto;
 
-    a {
+    a, #userbarToggle {
       @include transition($common-transition-time);
       color: $light-grey;
 
@@ -95,7 +95,7 @@ $common-transition-time: .2s;
     }
 
     &:hover {
-      a {
+      a, #userbarToggle {
         @include transition($common-transition-time);
         color: $light;
       }
