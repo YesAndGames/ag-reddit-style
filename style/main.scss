@@ -2,7 +2,9 @@ $dark: #000000;
 $light: #ffffff;
 $light-grey: #555555;
 $gold: #f9bb16;
-$light-tan: #ffeecc;
+$background: #222222;
+$button-fill: #553300;
+$button-border: #A19B7E;
 
 $heading-font-stack: Impact, Charcoal, "Arial Black", Gadget, sans-serif;
 
@@ -27,15 +29,93 @@ $common-transition-time: .2s;
     transition: $duration;
 }
 
+@mixin module-style() {
+  padding: 16px;
+  background-color: $light;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+  border-radius: 2px;
+}
+
 body {
-  background-color: $light-grey;
+  background-color: $background;
 
   .content {
+    @include module-style();
     margin: 16px 352px 64px 16px;
-    padding: 16px;
     padding-top: 8px !important;
-    background-color: $light;
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+  }
+}
+
+.side {
+  background-color: transparent;
+  width: 320px;
+  padding: 0px;
+  margin: 8px 16px 108px 0px;
+
+  .titlebox, .sponsorshipbox, #ad_main {
+    @include module-style();
+  }
+
+  #search {
+    input[type=text] {
+      width: 100%;
+      box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+      border-radius: 2px;
+    }
+  }
+
+  .morelink {
+    @include module-style();
+    @include heading-font();
+    background-image: none;
+    background-position: center;
+    background-color: $button-fill;
+    border: 2px solid $button-border;
+    padding: 0px;
+    height: 80px;
+
+    .nub {
+      display: none;
+    }
+
+    a {
+      font-size: x-large;
+      padding-top: 24px;
+    }
+
+    &:hover {
+      @include transition($common-transition-time);
+      border-color: $gold;
+
+      a, a:visited {
+        @include transition($common-transition-time);
+        color: $gold;
+      }
+    }
+
+    @include transition($common-transition-time);
+    border-color: $button-border;
+
+    a, a:visited {
+      @include transition($common-transition-time);
+      color: $light;
+    }
+  }
+
+  .sponsorshipbox {
+    padding: 0px !important;
+    max-width: 320px;
+
+    #ad_sponsorship {
+      margin: 10px 0 8px 10px;
+      height: 120px;
+    }
+  }
+
+  #ad_main {
+    width: 310px;
+    height: 290px;
+    padding: 10px 0 0 10px !important;
   }
 }
 
