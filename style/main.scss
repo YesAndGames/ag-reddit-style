@@ -210,6 +210,29 @@ $common-transition-time: .2s;
     color: $light-grey;
   }
 
+  #RESShortcutsEditContainer {
+    top: 24px;
+    background-color: transparent;
+
+    &>div {
+      @include transition($common-transition-time);
+      color: $light-grey;
+    }
+
+    &:hover>div {
+      @include transition($common-transition-time);
+      color: $light;
+    }
+
+    #RESShortcutsSort, #RESShortcutsRight, #RESShortcutsLeft, #RESShortcutsAdd, #RESShortcutsTrash {
+      background-color: transparent;
+
+      &:hover {
+        border-bottom: 1px solid $light;
+      }
+    }
+  }
+
   #userbarToggle {
     background-color: transparent;
     border: none;
