@@ -205,8 +205,17 @@ $common-transition-time: .2s;
 // RES-only selectors
 .res {
 
+  #srLeftContainer {
+    margin-top: 3px;
+
+    a {
+      color: $light;
+    }
+  }
+
   #RESShortcutsViewport {
-    margin-right: 381px;
+    margin-top: 3px;
+    margin-right: 370px;
     color: $light-grey;
   }
 
@@ -238,5 +247,8 @@ $common-transition-time: .2s;
     border: none;
     border-radius: 0;
     color: $light-grey;
+    line-height: 17pt;
+    font-size: small;
+    left: -2px;
   }
 }
