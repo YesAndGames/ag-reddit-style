@@ -204,12 +204,27 @@ $common-transition-time: .2s;
 
 // RES-only selectors
 .res {
-
   #srLeftContainer {
     margin-top: 3px;
 
     a {
-      color: $light;
+      @include transition($common-transition-time);
+      color: $light-grey;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:hover {
+      a {
+        @include transition($common-transition-time);
+        color: $light;
+      }
+    }
+
+    .srSep {
+      color: $light-grey;
     }
   }
 
