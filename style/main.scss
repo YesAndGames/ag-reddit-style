@@ -2,6 +2,7 @@ $dark: #000000;
 $light: #ffffff;
 $light-grey: #555555;
 $gold: #f9bb16;
+$light-tan: #ffeecc;
 
 $heading-font-stack: Impact, Charcoal, "Arial Black", Gadget, sans-serif;
 
@@ -26,10 +27,24 @@ $common-transition-time: .2s;
     transition: $duration;
 }
 
+body {
+  background-color: $light-grey;
+
+  .content {
+    margin: 16px 352px 64px 16px;
+    padding: 16px;
+    padding-top: 8px !important;
+    background-color: $light;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+  }
+}
+
 #header {
   background-color: $dark;
   border-bottom: 2px solid $gold;
   height: 170px;
+  background: url(%%reddit-banner-bg%%) no-repeat;
+  background-position: center;
 
   #sr-header-area {
     background-color: transparent;
